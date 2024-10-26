@@ -13,9 +13,84 @@
     --foreground: #ededed;
   }
 }
+/* globals.css */
+
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1a2e; /* Dark background */
+  color: #eaeaea; /* Light text color */
+  font-family: "Arial", sans-serif; /* Font family */
+  line-height: 1.6; /* Line height for better readability */
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 20px; /* Spacing below headings */
+}
+
+/* Flex container for the chat */
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for the chat messages */
+.stretch {
+  flex: 1;
+  overflow-y: auto; /* Allow scrolling for messages */
+}
+
+/* Message styling */
+.whitespace-pre-wrap {
+  white-space: pre-wrap; /* Preserve whitespace */
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0; /* Margin between messages */
+}
+
+.user {
+  background-color: #4ecca3; /* User message background color */
+  color: #ffffff; /* User message text color */
+  align-self: flex-end; /* Align user messages to the right */
+}
+
+.ai {
+  background-color: #162447; /* AI message background color */
+  color: #eaeaea; /* AI message text color */
+  align-self: flex-start; /* Align AI messages to the left */
+}
+
+/* Input field styling */
+input {
+  background-color: #2f2f2f; /* Dark input background */
+  color: #ffffff; /* White text color for input */
+  border: 1px solid #4ecca3; /* Input border color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding inside the input */
+  transition: border-color 0.3s ease; /* Transition for border color */
+}
+
+/* Change border color on focus */
+input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #f9a826; /* Highlight border color on focus */
+}
+
+/* General container styles */
+.container {
+  max-width: 800px; /* Maximum width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Padding inside the container */
+}
+
+/* Chat input form styling */
+form {
+  position: relative; /* For positioning the input */
 }
